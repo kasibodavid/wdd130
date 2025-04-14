@@ -9,7 +9,7 @@
     --transition-speed: 0.3s;
   }
   
-  /* Reset default styles */
+  /* Reset */
   * {
     margin: 0;
     padding: 0;
@@ -17,13 +17,13 @@
   }
   
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
     background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
   }
   
-  /* Header and Navigation */
+  /* Header */
   header {
     background-color: var(--primary-color);
     color: var(--white);
@@ -52,78 +52,68 @@
   
   /* Hero Section */
   .hero {
-    text-align: center;
     background-color: var(--secondary-color);
     color: var(--white);
-    padding: 2rem;
-  }
-  
-  .hero img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    margin-top: 1rem;
-    box-shadow: 0 4px 10px var(--shadow);
-  }
-  
-  /* Call to Action */
-  .cta {
     text-align: center;
-    padding: 2rem;
-    background-color: var(--accent-color);
+    padding: 2rem 1rem;
   }
   
-  .cta .btn {
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero article p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-left: 5px solid var(--accent-color);
+    border-radius: 6px;
     display: inline-block;
+  }
+  
+  
+  .hero article img {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--shadow);
     margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color var(--transition-speed) ease;
   }
   
-  .cta .btn:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  /* Newsletter Section */
-  .newsletter {
-    padding: 2rem;
+  /* History Section */
+  main section {
+    padding: 2rem 1.5rem;
     background-color: var(--white);
-    text-align: center;
+    margin: 2rem auto;
+    max-width: 1000px;
     box-shadow: 0 2px 8px var(--shadow);
+    border-radius: 8px;
   }
   
-  .newsletter form {
-    margin-top: 1rem;
+  main section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
   }
   
-  .newsletter input {
-    padding: 0.5rem;
+  main section p {
+    font-size: 1rem;
+  }
+  
+  /* Adventure Images */
+  main section img {
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
     margin: 0.5rem;
-    width: 250px;
-    max-width: 90%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
+    transition: transform var(--transition-speed);
   }
   
-  .newsletter button {
-    padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
-    color: var(--white);
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color var(--transition-speed) ease;
-  }
-  
-  .newsletter button:hover {
-    background-color: var(--secondary-color);
+  main section img:hover {
+    transform: scale(1.05);
   }
   
   /* Footer */
@@ -133,8 +123,9 @@
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+    position: relative;
   }
-
+  
   .social-links {
     margin-top: 0.5rem;
   }
